@@ -31,38 +31,40 @@ const MultiStepForm = () => {
     <PaymentProvider>
         <div className='max-w-3xl mx-auto p-4'>
             <Card className='overflow-hidden'>
-                    <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                      <div className='p-4 flex flex-col justify-between'>
-
+                    <div className='grid grid-cols-1 md:grid-cols-1 gap-6'>
+                      <div className='p-4 flex flex-col w-full justify-between'>
                         <div>
+
+                        
                             <h1 className='text-2xl font-bold mb-2'>Checkout</h1>
                             <p>Secure payment - Demo mode</p>
-                            
-                                <div className='mt-4'>
+
+                                <div className='mt-4 flex-1 w-full'>
 
                                     <ProgressBar />
-                                    <div className='border rounded p-4 bg-gray-50'>
+                                    <div className='border border-gray-200 rounded p-4 bg-gray-50'>
                                         <StepContent />
                                         <StepNavigation />
                                     </div>
                                 </div>
-
+                        
                         </div>
                       </div>
-               
-                        {/* <aside className='p-4 bg-gradient-to-b from-white to-indigo-50 rounded-lg'>
-                            <div>
-                                <h3>Order summary</h3>
-                                <div>Premium Plan</div>
-                                <div>$29.99</div>
-                            </div>
-                            <div>
-                                <h3>Payment tips</h3>
-                                <ul>
-                                    <li>Use test card : <span>4242 4242 4242 4242</span></li>
-                                </ul>
-                            </div>
-                        </aside> */}
+                                {/* <aside className='p-4 bg-gradient-to-b from-white to-indigo-50 rounded-lg'>
+                                    <div>
+                                        <h3>Order summary</h3>
+                                        <div>Premium Plan</div>
+                                        <div>$29.99</div>
+                                    </div>
+                                    <div>
+                                        <h3>Payment tips</h3>
+                                        <ul>
+                                            <li>Use test card : <span>4242 4242 4242 4242</span></li>
+                                        </ul>
+                                    </div>
+                                </aside>
+                */}
+                       
                  </div>
             </Card>
         </div>

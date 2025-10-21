@@ -8,7 +8,7 @@ const PaymentContext = createContext()
 
 const initialState = {
     step : 1,
-    customer : { name : "" , email : "" },
+    customer : { fullName : "" , email : "" },
     payment: {cardNumber : "" , expiry : "" , cvc : ""},
     receiptId : null,
     error : null,
@@ -20,6 +20,16 @@ const initialState = {
 //action : action object that describe what is the action (event) that user will take : { type , payload }
 const paymentReducer = (state , action) => {
     switch (action.type) {
+        // payload : {section : "customer" | "payment" , name , value}
+        case 'SET_INPUT':
+            return {
+                ...state,
+                [action.payload.section] : {
+                    ...state[action.payload.section],
+                    [action.payload.name] : action.payload.value
+                }
+            }
+
         case 'NEXT_STEP':
            return {
              ...state , step : Math.min(4 , state.step + 1)

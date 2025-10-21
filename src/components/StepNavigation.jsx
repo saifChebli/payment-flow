@@ -6,8 +6,6 @@ const StepNavigation = () => {
 
     const { state , dispatch } = usePayment()
 
-    console.log(state)
-
 
   return (
     <div className='mt-6 flex justify-between items-center'>
