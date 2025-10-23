@@ -38,6 +38,26 @@ const paymentReducer = (state , action) => {
             return {
                 ...state , step : Math.max(1 , state.step - 1)
             }
+
+        case "SUBMIT_START": 
+           return {
+                ...state,
+                loading : true,
+                error :null
+           }
+        case "SUBMIT_SUCCESS":
+            return {
+                ...state,
+                loading : false,
+                step : 4,
+                receiptId : action.payload.receiptId
+            }
+        case "SUBMIT_ERROR":
+            return {
+                ...state,
+                loading : false,
+                error : action.payload.error
+            }
     
         default:
             state;
